@@ -29,3 +29,4 @@ I have created a personal portfolio website to showcase my skills, projects, and
 ## Icons
 - I have used some icons from [Font Awesome](https://fontawesome.com/)
 ## ScreenShot Of Homepage
+![Screenshot](https://github.com/bijoy-laxmi-behera/Portfolio/assets/118542793/4321629a-1311-48c1-b412-1c88a09f3de1)
