@@ -1,0 +1,439 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: sans-serif, Georgia, Times, 'Times New Roman', serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth; /* side bar smothness */
+}
+body{
+    background: black;
+    color: black;
+}
+/* ------------------navbar--------------------------- */
+#navbar{
+    width:100%;
+    height:100vh;
+    background-image: url(images/background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    padding: 10px 10%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap:wrap ;
+}
+.logo{
+    width: 140px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a {
+    color: black;
+  -webkit-text-fill-color: #5d001e;
+  -webkit-text-stroke-width: 1.05px;
+  -webkit-text-stroke-color: #5d001e;
+    text-decoration: none;
+    font-size: 18px;
+    position:relative; 
+} 
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    background: darkred;
+    left: 0;
+    bottom: -1px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.navbar-text{
+    color: black;
+    margin-top: 100px;
+    font-size: 30px;
+}
+/* --------------------------homepage----------------------------------- */
+/* ------------------------typing effect-------------------------------- */
+.animated-text span1{
+    position: relative;
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+.animated-text span1::before{
+    content: "Youtuber";
+    color: darkred;
+    animation: words 20s infinite;
+}
+.animated-text span1::after{
+    content: '';
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 2px solid black;
+    right: -8px;
+    animation: cursor .8s infinite, typing 20s steps(14) infinite;
+}
+@keyframes cursor {
+    to{
+        border-left: 2px solid #ff7f5000;
+    }
+}
+@keyframes words {
+    0%,20%{
+        content: "Youtuber";
+    }
+    21%,40%{
+        content: "Blogger";
+    }
+    41%,60%{
+        content: "Developer";
+    }
+    61%,80%{
+        content: "Designer";
+    }
+    81%,100%{
+        content: "Gamer";
+    }
+}
+@keyframes typing {
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+        width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width: calc(100% + 8px);
+    }
+}
+/* -------------------------home-page---------------------------- */
+.navbar-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+.navbar-text h1 span{
+    color:darkred;
+}
+
+/*---------------------ABOUT--------------------------*/
+#about{
+    padding:80px 0;
+    color: whitesmoke;
+}
+.row{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col1{
+    flex-basis: 35%;
+}
+.about-col1 img{
+    width: 300px;
+    border-radius: 15px;
+}
+.about-col2{
+    flex-basis: 60%; /*space between pic and about*/ 
+}
+.titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position:relative; 
+}
+.links::after{
+    content: '';
+    width:0;
+    height: 3px;
+    background: darkred;
+    position: absolute;
+    left:0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.links.active-link::after{
+    width:50%;
+}
+.contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.contents ul li span{
+    color:brown;
+    font-size: 14px;
+}
+.contents{
+    display:none;
+}
+.contents.active-tab{
+    display: block;
+}
+/* --------------------------capability------------------------------ */
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: whitesmoke
+}
+#capability{
+    padding: 30px 0;
+}
+.capability-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    color: whitesmoke;
+}
+.capability-list div{
+    background: gray;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+.capability-list div i{
+    font-size: 50px;
+    margin-bottom:30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.capability-list div h2{
+    font-size:30px;
+    font-weight:500;
+    margin-bottom: 15px;
+}
+.capability-list div a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.capability-list div:hover{
+    background: darkred;
+    transform: translateY(-10px);
+}
+/* ---------------------------project-------------------------- */
+#profile{
+    padding: 30px 0;
+}
+.workdone{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    color: whitesmoke;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5%;
+}
+.layer{
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0,0,0,0.6),darkred);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom:0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: heigh t0.5s;
+}
+.layer h3{
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color: darkred;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: whitesmoke;
+    width:60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover img{
+    transform:scale(2.1) ;
+}
+.work:hover .layer{
+    height: 100%;
+}
+.btn{
+    display: block;
+    margin:50px auto;
+    width: fit-content;
+    border:1px solid darkred;
+    padding: 14px 50px;
+    border-radius: 6px;
+    color:whitesmoke;
+    text-decoration:none;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background-color: darkred;
+
+}
+/* ------------------------------contact----------------------------- */
+.container{
+    color: whitesmoke;
+}
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: darkred;
+    margin-right:15px;
+    font-size: 25px;
+}
+.social-icon{
+    margin-top: 30px;
+}
+.social-icon a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: gray;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icon a:hover{
+    color: whitesmoke;
+    transform: translatey(-5px);
+}
+.btn.btn2{
+    display: inline-block;
+    background: darkred;
+}
+.contact-right form{
+    width: 100%
+}
+form input, form textarea{
+    width: 100%;
+    border:0;
+    outline: none;
+    background: rgb(77, 70, 72);
+    padding: 15px;
+    margin: 15px 0;
+    color: whitesmoke;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.copyright{
+    color: whitesmoke;
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: rgb(77, 70, 72);
+    font-weight: 300;
+    margin-top: 20px;
+}
+/* -----------------------response and nav bar in phone size----------------------------------- */
+
+nav .fa-solid{
+    display: none;
+}
+
+@media only screen and (max-width: 600px){
+    #navbar{
+        background-image: url(images/phone-background.jpeg);
+    }
+    .navbar-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .navbar-text h1{
+        font-size: 30px;
+    }
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: darkred;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top:25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .sub-title{
+        font-size: 40px;
+    }
+    .about-col1 img{
+        width: 50vh;
+        border-radius: 15px;
+    }
+    .about-col1, .about-col2{
+       flex: 100%;
+    }
+    .about-col1{
+        margin-bottom: 30px;
+    }
+    .about-col2{
+        font-size: 14px;
+    }
+    .links{
+        font-size: 16px;
+        margin-right: 10px;
+    }
+    .contact-left,.contact-right{
+        flex-basis: 100%;
+    }
+}   

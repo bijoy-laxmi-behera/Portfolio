@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/fd2c973b0f.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+</head>
+
+<body>
+    <script src="script.js"></script>
+    <!-- ------------------------------NAVBAR------------------------------- -->
+    <header>
+        <div id="navbar">
+            <div class="container">
+                <nav>
+                    <img src="images/logo.png" class="logo">
+                    <ul id="Sidebar">
+                        <li><a href="#navbar">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#capability">Capability</a></li>
+                        <li><a href="#profile">Project</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                </nav>
+                <!-- ------------------Homepage---------------------------------- -->
+                <div class="navbar-text">
+                    <h1>Hi, I'm <span>Bijoy</span><br>Laxmi Behera</h1>
+                    <div class="animated-text">
+                        And I'm a <span1></span1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ---------------------------ABOUT--------------------------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col1">
+                    <img src="images/user1.jpg" alt="my pic">
+                </div>
+                <div class="about-col2">
+                    <h1>About Me</h1><br>
+                    <p>Hello! I'm Bijoy Laxmi Behera, a passionate and dedicated fresher in web development. With a
+                        strong foundation in HTML, CSS, JavaScript, and React, I enjoy creating dynamic and
+                        user-friendly web applications. I'm constantly learning and excited to contribute innovative
+                        solutions to the tech world.<br><br> Let's build something amazing together!</p>
+                    <div class="titles">
+                        <p class="links active-link" onclick="opentab('education')">Education</p>
+                        <p class="links" onclick="opentab('experience')">Experience</p>
+                        <p class="links" onclick="opentab('skills')">Skills</p>
+                    </div>
+                    <div class="contents active-tab" id="education">
+                        <ul>
+                            <li>
+                                <span>Matriculation (2019)</span><br>Kendriya Vidyalaya, Dhemaji, Assam
+                            </li>
+                            <li>
+                                <span>Intermediate (2021)</span><br>Sailabala Women's College, Cuttack, Odisha
+                            </li>
+                            <li>
+                                <span>Graduation (2024)</span><br>Ajay -Binay Institute of Technology, Cuttack, Odisha
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="contents" id="experience">
+                        <ul>
+                            <li>
+                                <span>Web Development Intern</span><br>Company: Unified Mentor Pvt. Ltd.
+                                <br>Duration: June 1, 2024 - September 1, 2024
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="contents" id="skills">
+                        <ul>
+                            <li>
+                                <span>Programming Languages</span><br>Proficient in HTML, CSS, JavaScript.
+                                <br>Familiar with Python, Java.
+                            </li>
+                            <li>
+                                <span>Web Development Frameworks</span><br>Experience with React.js
+                                <br>Knowledge of Bootstrap CSS frameworks.
+                            </li>
+                            <li>
+                                <span>Version Control</span><br>Proficient in Git and GitHub.
+                            </li>
+                            <li>
+                                <span>Database Management</span><br>Familiar with MySQL.
+                            </li>
+                            <li>
+                                <span>Development Tools</span><br>Experience with Visual Studio Code.
+                            </li>
+                            <li>
+                                <span>Communication</span><br>Effective written and verbal communication skills.
+                                <br>Ability to collaborate with team members and stakeholders.
+                            </li>
+                            <li>
+                                <span>Time Management</span><br>Capable of managing multiple tasks and meeting deadlines
+                                effectively.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ---------------------------------capabilities------------------------------- -->
+    <div id="capability">
+        <div class="container">
+            <h1 class="sub-title">Capabilities</h1>
+            <div class="capability-list">
+                <div>
+                    <i class="fa-brands fa-html5"></i>
+                    <h2>HTML</h2>
+                    <p>HTML (HyperText Markup Language) is the backbone of web development. It transforms plain text
+                        into engaging web pages, incorporating elements like images, videos, and interactive forms. HTML
+                        is the magic behind every website, making the internet vibrant and dynamic.</p>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-css3"></i>
+                    <h2>CSS</h2>
+                    <p>CSS (Cascading Style Sheets) brings style and flair to web pages. It controls layout, colors,
+                        fonts, and responsiveness, transforming plain HTML into visually appealing and user-friendly
+                        designs. CSS is the creative force that makes websites look stunning and unique.</p>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-js"></i>
+                    <h2>JS</h2>
+                    <p>JavaScript (JS) is the dynamic engine of the web. It enables interactive features like
+                        animations, form validations, and real-time updates. By making websites responsive and engaging,
+                        JavaScript transforms static pages into dynamic, user-friendly experiences.</p>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-react"></i>
+                    <h2>REACT</h2>
+                    <p>React is a powerful JavaScript library for building user interfaces. Developed by Facebook, it
+                        enables developers to create fast, dynamic web applications with reusable components. React's
+                        efficient updating and rendering make web pages highly interactive and responsive.</p>
+                    <a href="https://react.dev/" target="_blank">learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ------------------------------------Projects-------------------------------------------- -->
+    <div id="profile">
+        <div class="container">
+            <h1 class="sub-title">Projects</h1>
+            <div class="workdone">
+                <div class="work">
+                    <img src="https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010125.jpg?size=626&ext=jpg&ga=GA1.1.672697106.1717113600&semt=ais_user"
+                        width="650px" height="338px">
+                    <div class="layer">
+                        <h3>Personal Portfolio</h3>
+                        <p>Crafted a personalized portfolio showcasing my education, projects, and achievements,
+                            reflecting dedication, creativity, and professional growth.</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="https://news.mit.edu/sites/default/files/images/202207/MIT-Healthcare-Technology-01.jpg"
+                        width="650px" height="338px">
+                    <div class="layer">
+                        <h3>Operation Scheduler For Hospital Management</h3>
+                        <p>Transform static hospital timetables into dynamic models to efficiently manage operating room
+                            activities.</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="https://www.anytimefitness.co.in/wp-content/uploads/2023/03/Gym-Etiquette-1024x683.jpg"
+                        width="650px" height="338px">
+                    <div class="layer">
+                        <h3>GYM Management System</h3>
+                        <p>"Discover how a digital gym management system revolutionizes operations and enhances member
+                            experience effortlessly."</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="https://staging.herovired.com/wp-content/uploads/2023/02/Frontend-Technologies.webp"
+                        width="650px" height="338px">
+                    <div class="layer">
+                        <h3>Blog Website</h3>
+                        <p>"Dynamic blog website offering diverse content on health, fitness, nutrition, and wellness
+                            for enthusiasts and professionals alike."</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <a href="#" class="btn">See more</a>
+            </div>
+        </div>
+        <!-- --------------------------------contact-------------------------------------- -->
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">contact me</h1>
+                        <p><i class="fa-solid fa-paper-plane"></i><a
+                                href="mailto:bijoy.2017pp@gmail.com">bijoy.2017pp@gmail.com</a></p>
+
+                        <p><i class="fa-solid fa-phone"></i><a href="tel:+91 91xxxxxx02">91xxxxxx02</a></p>
+                        </li>
+                        <div class="social-icon">
+                            <a href="https://www.facebook.com/share/DVLCaapzQzG65vAM/?mibextid=qi2Omg" target="blank"><i
+                                    class="fa-brands fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/bijoy_laxmi_behera?igsh=cjB0eHB6N2xldnBm"
+                                target="blank"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://github.com/bijoy-laxmi-behera" target="blank"><i
+                                    class="fa-brands fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/bijoy-laxmi-behera-1a1127231?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                                target="blank"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://youtube.com/@bijoy_laxmi_behera?si=s_7cYQbGPs6xC4f8" target="blank"><i
+                                    class="fa-brands fa-youtube"></i></a>
+                        </div>
+                        <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+                    </div>
+
+                    <div class="contact-right">
+                        <form>
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="Email" placeholder="Your Email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn btn2">submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <fotter>
+                <div class="copyright">
+                    <p>copyright &copy made by Bijoy </p>
+                </div>
+            </fotter>
+        </div>
+</body>
+
+</html>
