@@ -38,9 +38,9 @@ nav ul li{
 }
 nav ul li a {
     color: black;
-  -webkit-text-fill-color: #5d001e;
+  -webkit-text-fill-color: darkred;
   -webkit-text-stroke-width: 1.05px;
-  -webkit-text-stroke-color: #5d001e;
+  -webkit-text-stroke-color: #AA336A;
     text-decoration: none;
     font-size: 18px;
     position:relative; 
@@ -92,16 +92,16 @@ nav ul li a:hover::after{
 }
 @keyframes words {
     0%,20%{
-        content: "Youtuber";
+        content: "Web Developer";
     }
     21%,40%{
         content: "Blogger";
     }
     41%,60%{
-        content: "Developer";
+        content: "Video Editor";
     }
     61%,80%{
-        content: "Designer";
+        content: "Photo Editor";
     }
     81%,100%{
         content: "Gamer";
