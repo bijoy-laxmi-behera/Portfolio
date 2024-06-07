@@ -1,22 +1,26 @@
-var tablinks = document.getElementsByClassName("links");
-var tabcontents = document.getElementsByClassName("contents");
+document.addEventListener("DOMContentLoaded", function() {
+  const tabs = document.querySelectorAll('.links');
+  const contents = document.querySelectorAll('.contents');
 
-function opentab(tabname) {
-  for (tablink of tablinks) {
-    tablink.classList.remove("active-link");
-  }
-  for (tabcontent of tabcontents) {
-    tabcontent.classList.remove("active-tab");
-  }
-  event.currentTarget.classList.add("active-link");
-  document.getElementById(tabname).classList.add("active-tab");
-}
+  tabs.forEach((tab, index) => {
+      tab.addEventListener('click', () => {
+          tabs.forEach(t => t.classList.remove('active-link'));
+          contents.forEach(c => c.classList.remove('active-tab'));
 
-var Sidebar = document.getElementById("Sidebar");
+          tab.classList.add('active-link');
+          contents[index].classList.add('active-tab');
+      });
+  });
 
-function openmenu() {
-  Sidebar.style.right = "0";
-}
-function closemenu() {
-  Sidebar.style.right = "-200px";
-}
+  const menuIcon = document.querySelector('nav .fa-bars');
+  const closeIcon = document.querySelector('nav .fa-xmark');
+  const sidebar = document.getElementById('Sidebar');
+
+  menuIcon.addEventListener('click', () => {
+      sidebar.style.right = '0';
+  });
+
+  closeIcon.addEventListener('click', () => {
+      sidebar.style.right = '-200px';
+  });
+});
