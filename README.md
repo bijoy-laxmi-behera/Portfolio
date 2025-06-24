@@ -29,4 +29,5 @@ I have created a personal portfolio website to showcase my skills, projects, and
 ## Icons
 - I have used some icons from [Font Awesome](https://fontawesome.com/)
 ## ScreenShot Of Homepage
-![Screenshot](https://github.com/bijoy-laxmi-behera/Portfolio/assets/118542793/4321629a-1311-48c1-b412-1c88a09f3de1)
+![screencapture-127-0-0-1-5501-index-html-2025-06-24-09_56_03](https://github.com/user-attachments/assets/3023fa45-95e7-4a8b-ba9a-8a435dbd101e)
+
