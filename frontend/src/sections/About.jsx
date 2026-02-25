@@ -107,10 +107,10 @@ export default function About() {
     className="flex whitespace-nowrap"
   >
     <span className="text-[90px] md:text-[140px] font-extrabold text-white/5">
-      CREATIVE • GEN-Z • MERN • UI • FULL STACK •
+      CREATIVE • FRONTEND DEVELOPMENT • MERN • BACKEND DEVELOPMENT • FULL STACK •
     </span>
     <span className="text-[90px] md:text-[140px] font-extrabold text-white/5">
-      CREATIVE • GEN-Z • MERN • UI • FULL STACK •
+      CREATIVE • FRONEND DEVELOPMENT • MERN • BACKEND DEVELOPMENT • FULL STACK •
     </span>
   </motion.div>
 </div>
