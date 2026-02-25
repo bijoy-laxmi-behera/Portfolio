@@ -7,8 +7,8 @@ Designed to showcase projects, skills, and enable direct contact via backend-pow
 
 ## 🚀 Live Demo
 
-Frontend: https://your-frontend-url.vercel.app  
-Backend API: https://your-backend-url.onrender.com  
+Frontend: https://bijoylaxmibehera.vercel.app
+Backend API: https://portfolio-backend-adkg.onrender.com  
 
 ---
 
@@ -137,36 +137,5 @@ LinkedIn: https://linkedin.com/in/YOUR_LINK
 
 This project is open-source and available under the MIT License.
 ```
-
----
-
-# 🎯 Why This README Works
-
-- Clean structure
-- Recruiter-friendly
-- Clear tech stack
-- Shows backend capability
-- Professional tone
-- Deployment clarity
-
----
-
-# 🚀 Next Step
-
-Before deployment, I recommend:
-
-1. Add real live URLs
-2. Add screenshots (optional but powerful)
-3. Deploy backend
-4. Deploy frontend
-5. Update README with final links
-
----
-
-If you want next:
-
-- I can help you deploy backend to Render step-by-step
-- Or optimize README to internship-optimized version
-- Or add badges + portfolio polish
 
 Tell me the direction.
