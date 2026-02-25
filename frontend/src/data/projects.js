@@ -9,7 +9,7 @@ const projects = [
     image: project1,
     tech: ["React", "Tailwind CSS", "Node.js", "MongoDB", "Express.js"],
     github: "https://github.com/bijoy-laxmi-behera/quickbite-frontend",
-    demo: "https://yourdemo.com",
+    demo: "https://github.com/bijoy-laxmi-behera/quickbite-frontend",
   },
   {
     title: "Student Managemetent System",
@@ -17,7 +17,7 @@ const projects = [
     image: project2,
     tech: ["PHP", "MySQL", "Bootstrap"],
     github: "https://github.com/bijoy-laxmi-behera/MarkMyWords",
-    demo: "https://yourdemo.com",
+    demo: "https://github.com/bijoy-laxmi-behera/MarkMyWords",
   },
   {
     title: "Portfolio Website",
@@ -33,7 +33,7 @@ const projects = [
     image: project4,
     tech: ["HTML", "CSS", "Javascipt"],
     github: "https://github.com/bijoy-laxmi-behera/Starbucks",
-    demo: "https://yourdemo.com",
+    demo: "https://github.com/bijoy-laxmi-behera/Starbucks",
   },
 ];
 
