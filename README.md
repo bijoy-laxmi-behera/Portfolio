@@ -1,14 +1,19 @@
 # 🌐 Full Stack Portfolio (MERN)
 
-A modern full-stack portfolio built using the MERN stack.  
-Designed to showcase projects, skills, and enable direct contact via backend-powered email system.
+<p align="center"> <img src="https://readme-typing-svg.herokuapp.com?size=26&duration=3000&color=8B5CF6&center=true&vCenter=true&width=800&lines=MERN+Stack+Developer;Full+Stack+Web+Application;Modern+Animated+Portfolio" /> </p>
+
+A modern full-stack portfolio built using the MERN Stack.
+Designed to showcase projects, skills, and enable direct contact via a secure backend-powered email system.
 
 ---
 
 ## 🚀 Live Demo
 
+<p align="center"> <a href="https://bijoylaxmibehera.vercel.app"> <img src="https://img.shields.io/badge/Frontend-Vercel-black?style=for-the-badge&logo=vercel" /> </a> <a href="https://portfolio-backend-adkg.onrender.com"> <img src="https://img.shields.io/badge/Backend-Render-46E3B7?style=for-the-badge&logo=render&logoColor=black" /> </a> </p>
+
 Frontend: https://bijoylaxmibehera.vercel.app
-Backend API: https://portfolio-backend-adkg.onrender.com  
+
+Backend API: https://portfolio-backend-adkg.onrender.com
 
 ---
 
