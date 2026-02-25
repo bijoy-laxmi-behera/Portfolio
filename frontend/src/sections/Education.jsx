@@ -22,8 +22,9 @@ export default function Education() {
       degree: "Master of Computer Applications (MCA)",
       institution: "Silicon University, Bhubaneswar",
       duration: "2024 – Present",
-      score: "CGPA: —",
+      score: "CGPA: 7.09",
       logo: silicon,
+      link: "https://silicon.ac.in",
       description:
         "Advanced coursework in scalable systems, cloud fundamentals, and modern full-stack development.",
     },
@@ -31,8 +32,9 @@ export default function Education() {
       degree: "B.Sc in IT & Management",
       institution: "Ajay - Binay Institute of Technology",
       duration: "2021 – 2024",
-      score: "CGPA: 8.5",
+      score: "CGPA: 7.53",
       logo: abit,
+      link: "https://abit.edu.in",
       description:
         "Strong foundation in programming, database systems, and web application architecture.",
     },
@@ -40,8 +42,9 @@ export default function Education() {
       degree: "Higher Secondary (Science)",
       institution: "Shailabala Women's Autonomous College",
       duration: "2019 – 2021",
-      score: "82%",
+      score: "66.66%",
       logo: swac,
+      link: "https://www.shailabalawomenscollege.ac.in/",
       description:
         "Built strong analytical and scientific fundamentals supporting technical growth.",
     },
@@ -49,8 +52,9 @@ export default function Education() {
       degree: "Matriculation",
       institution: "Kendriya Vidyalaya Gerukamukh",
       duration: "2019",
-      score: "88%",
+      score: "66.68%",
       logo: kv,
+      link: "https://gerukamukh.kvs.ac.in/",
       description:
         "Completed secondary education with emphasis on structured learning and discipline.",
     },
@@ -62,7 +66,6 @@ export default function Education() {
       ref={sectionRef}
       className="relative bg-neutral-950 text-white py-32 overflow-hidden"
     >
-
       {/* 🔥 Neon Gradient Background */}
       <div className="absolute inset-0 bg-linear-to-tr from-indigo-500/10 via-purple-500/10 to-pink-500/10 blur-3xl"></div>
 
@@ -74,7 +77,6 @@ export default function Education() {
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-20">
-
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -83,14 +85,11 @@ export default function Education() {
           viewport={{ once: true }}
           className="mb-24"
         >
-          <h2 className="text-4xl md:text-5xl font-bold">
-            Education
-          </h2>
+          <h2 className="text-4xl md:text-6xl font-bold mb-16 bg-linear-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Education</h2>
         </motion.div>
 
         {/* Timeline */}
         <div className="relative">
-
           {/* Background Line */}
           <div className="absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-white/10 transform md:-translate-x-1/2"></div>
 
@@ -101,7 +100,6 @@ export default function Education() {
           />
 
           <div className="space-y-28">
-
             {educationData.map((item, index) => (
               <motion.div
                 key={index}
@@ -110,12 +108,9 @@ export default function Education() {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
                 className={`relative flex flex-col md:flex-row ${
-                  index % 2 === 0
-                    ? "md:justify-start"
-                    : "md:justify-end"
+                  index % 2 === 0 ? "md:justify-start" : "md:justify-end"
                 }`}
               >
-
                 {/* Neon Dot */}
                 <div className="absolute left-4 md:left-1/2 w-5 h-5 bg-linear-to-r from-indigo-500 to-pink-500 rounded-full transform -translate-x-1/2 shadow-lg shadow-purple-500/50"></div>
 
@@ -124,16 +119,20 @@ export default function Education() {
                   whileHover={{ scale: 1.03 }}
                   className="ml-12 md:ml-0 md:w-1/2 bg-white/5 backdrop-blur-2xl border border-white/10 rounded-3xl p-8 shadow-xl hover:shadow-purple-500/20 transition duration-300"
                 >
-
                   {/* Logo + Info */}
                   <div className="flex items-start gap-5">
-
-                    <motion.img
-                      whileHover={{ rotate: 6, scale: 1.05 }}
-                      src={item.logo}
-                      alt={item.institution}
-                      className="w-14 h-14 object-contain bg-white/10 rounded-xl p-3"
-                    />
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <motion.img
+                        whileHover={{ rotate: 6, scale: 1.05 }}
+                        src={item.logo}
+                        alt={item.institution}
+                        className="w-14 h-14 object-contain bg-white/10 rounded-xl p-3 cursor-pointer"
+                      />
+                    </a>
 
                     <div>
                       <h3 className="text-xl md:text-2xl font-semibold">
@@ -148,7 +147,6 @@ export default function Education() {
                         {item.duration}
                       </p>
                     </div>
-
                   </div>
 
                   {/* Score Badge */}
@@ -160,12 +158,9 @@ export default function Education() {
                   <p className="text-gray-400 mt-5 text-sm leading-relaxed">
                     {item.description}
                   </p>
-
                 </motion.div>
-
               </motion.div>
             ))}
-
           </div>
         </div>
       </div>

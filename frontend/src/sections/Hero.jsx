@@ -1,4 +1,4 @@
-import heroBg from "../assets/images/hero-bg.jpg";
+import heroBg from "../assets/images/hero-bg.jpeg";
 import { TypeAnimation } from "react-type-animation";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
@@ -52,15 +52,23 @@ export default function Hero() {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="mt-8 text-xl md:text-3xl font-medium text-gray-300"
           >
-            Crafting{" "}
+            I'm a {" "}
             <span className="text-transparent bg-linear-to-r from-indigo-400 to-pink-400 bg-clip-text font-semibold">
               <TypeAnimation
                 sequence={[
-                  "Scalable Web Apps",
+                  "MERN Stack Developer",
                   2000,
-                  "Modern UI Systems",
+                  "Frontend Enthusiast",
                   2000,
-                  "High-Performance APIs",
+                  "Backend Developer",
+                  2000,
+                  "Web Developer",
+                  2000,
+                  "creative coder",
+                  2000,
+                  "problem solver",
+                  2000,
+                  "Full Stack Developer",
                   2000,
                 ]}
                 wrapper="span"

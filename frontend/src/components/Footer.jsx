@@ -33,7 +33,7 @@ export default function Footer() {
       <div className="relative max-w-7xl mx-auto px-6 lg:px-20 py-20">
         <div className="grid md:grid-cols-3 gap-16">
 
-          {/* 1️⃣ Brand Column */}
+          {/* 1️ Brand Column */}
           <div className="space-y-6">
             <h2 className="text-3xl font-bold text-white tracking-tight">
               B
@@ -76,7 +76,7 @@ export default function Footer() {
               Typically responds within 24 hours
             </div>
 
-            {/* 🔥 Resume Download Button */}
+            {/* Resume Download Button */}
             <motion.a
               href="/resume.pdf"
               download
@@ -89,14 +89,14 @@ export default function Footer() {
             </motion.a>
           </div>
 
-          {/* 2️⃣ Navigation Column */}
+          {/* 2️ Navigation Column */}
           <div className="space-y-6">
             <h3 className="text-white font-semibold tracking-wide">
               Navigation
             </h3>
 
             <ul className="space-y-3 text-sm">
-              {["Home", "About", "Capabilities", "Projects", "Contact"].map(
+              {["Home", "About", "Education", "Capabilities", "Projects", "Contact"].map(
                 (item) => (
                   <li key={item}>
                     <a
@@ -115,7 +115,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* 3️⃣ Social Column */}
+          {/* 3 Social Column */}
           <div className="space-y-6">
             <h3 className="text-white font-semibold tracking-wide">
               Connect
@@ -123,10 +123,10 @@ export default function Footer() {
 
             <div className="flex gap-5">
               {[
-                { icon: Github, link: "https://github.com/" },
-                { icon: Linkedin, link: "https://linkedin.com/" },
-                { icon: Mail, link: "mailto:yourmail@gmail.com" },
-                { icon: Instagram, link: "https://instagram.com/" },
+                { icon: Github, link: "https://github.com/bijoy-laxmi-behera" },
+                { icon: Linkedin, link: "https://www.linkedin.com/in/bijoy-laxmi-behera" },
+                { icon: Mail, link: "mailto:bijoylaxmi.dev@gmail.com" },
+                { icon: Instagram, link: "https://instagram.com/bijoy_laxmi_behera" },
               ].map((item, index) => (
                 <motion.a
                   key={index}

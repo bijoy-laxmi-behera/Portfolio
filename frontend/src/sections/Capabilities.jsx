@@ -10,10 +10,10 @@ export default function Capabilities() {
       className="relative bg-neutral-950 text-white py-32 overflow-hidden"
     >
 
-      {/* 🔥 Neon Gradient Background */}
+      {/* Neon Gradient Background */}
       <div className="absolute inset-0 bg-linear-to-tr from-indigo-500/10 via-purple-500/10 to-pink-500/10 blur-3xl"></div>
 
-      {/* 🔥 Floating Gradient Orbs */}
+      {/* Floating Gradient Orbs */}
       <motion.div
         animate={{ y: [0, -40, 0] }}
         transition={{ repeat: Infinity, duration: 10 }}
@@ -25,7 +25,7 @@ export default function Capabilities() {
         className="absolute bottom-20 right-10 w-80 h-80 bg-indigo-500/10 rounded-full blur-3xl"
       />
 
-      {/* 🔥 Faded Background Text */}
+      {/* Faded Background Text */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none">
         <h1 className="text-[100px] md:text-[180px] font-extrabold text-white/5 tracking-widest">
           SKILLS

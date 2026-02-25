@@ -9,6 +9,7 @@ import express from "../assets/icons/express.png";
 import node from "../assets/icons/node.png";
 import mysql from "../assets/icons/mysql.png";
 import php from "../assets/icons/php.png";
+import github from "../assets/icons/github.png";
 
 export const skills = [
   { name: "HTML", icon: html },
@@ -22,4 +23,5 @@ export const skills = [
   { name: "Node.js", icon: node },
   { name: "MySQL", icon: mysql },
   { name: "PHP", icon: php },
+  { name: "GitHub", icon: github },
 ];

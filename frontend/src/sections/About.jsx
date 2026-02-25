@@ -2,7 +2,7 @@ import { useRef } from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
 import Tilt from "react-parallax-tilt";
-import profileImg from "../assets/images/profile.jpg"; // add your image
+import profileImg from "../assets/images/profile.png"; // add your image
 
 /* ---------- Animated Counter Component ---------- */
 function Counter({ value }) {
