@@ -6,7 +6,7 @@ const projects = [
   {
     title: "QuickBite: Food Delivery web application",
     description: "Full-stack food ordering platform with authentication and payment integration.(Ongoing project)",
-    image: project1,
+    image: project2,
     tech: ["React", "Tailwind CSS", "Node.js", "MongoDB", "Express.js"],
     github: "https://github.com/bijoy-laxmi-behera/quickbite-frontend",
     demo: "https://github.com/bijoy-laxmi-behera/quickbite-frontend",
@@ -14,7 +14,7 @@ const projects = [
   {
     title: "Student Managemetent System",
     description: "Real-time chat system with socket.io and JWT authentication.",
-    image: project2,
+    image: project1,
     tech: ["PHP", "MySQL", "Bootstrap"],
     github: "https://github.com/bijoy-laxmi-behera/MarkMyWords",
     demo: "https://github.com/bijoy-laxmi-behera/MarkMyWords",
