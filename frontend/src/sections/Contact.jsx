@@ -1,6 +1,5 @@
 import { useState } from "react";
 import toast from "react-hot-toast";
-// eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Mail,
@@ -10,6 +9,8 @@ import {
   Linkedin,
   CheckCircle,
 } from "lucide-react";
+
+const API_URL = import.meta.env.VITE_API_URL;
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -29,19 +30,20 @@ export default function Contact() {
     }));
   };
 
-  /* =============================
-     REAL BACKEND SUBMIT HANDLER
-  ============================== */
+  const triggerError = (message) => {
+    setShake(true);
+    toast.error(message);
+    setTimeout(() => setShake(false), 500);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Basic validation
     if (!formData.name || !formData.email || !formData.message) {
-      triggerError("Fill everything. No shortcuts.");
+      triggerError("All fields are required.");
       return;
     }
 
-    // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
       triggerError("Enter a valid email address.");
@@ -51,16 +53,13 @@ export default function Contact() {
     try {
       setLoading(true);
 
-      const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/api/contact`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        }
-      );
+      const response = await fetch(`${API_URL}/api/contact`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
       const data = await response.json();
 
@@ -68,7 +67,6 @@ export default function Contact() {
         throw new Error(data.message || "Something went wrong");
       }
 
-      // Success
       setSuccessOverlay(true);
       toast.success("Message sent successfully 🚀");
       setFormData({ name: "", email: "", message: "" });
@@ -84,33 +82,13 @@ export default function Contact() {
     }
   };
 
-  const triggerError = (message) => {
-    setShake(true);
-    toast.error(message);
-    setTimeout(() => setShake(false), 500);
-  };
-
   return (
     <section
       id="contact"
       className="relative bg-neutral-950 text-white py-32 overflow-hidden"
     >
-      {/* 🔥 Neon Background Glow */}
       <div className="absolute inset-0 bg-linear-to-tr from-indigo-500/15 via-purple-500/15 to-pink-500/15 blur-3xl" />
 
-      {/* 🔥 Floating Orbs */}
-      <motion.div
-        animate={{ y: [0, -60, 0] }}
-        transition={{ repeat: Infinity, duration: 10 }}
-        className="absolute top-20 left-10 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl"
-      />
-      <motion.div
-        animate={{ y: [0, 60, 0] }}
-        transition={{ repeat: Infinity, duration: 12 }}
-        className="absolute bottom-20 right-10 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl"
-      />
-
-      {/* 🔥 Big Background Text */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none">
         <h1 className="text-[120px] md:text-[220px] font-extrabold text-white/5 tracking-widest">
           CONNECT
@@ -138,33 +116,20 @@ export default function Contact() {
             </p>
 
             <div className="space-y-6 text-gray-300">
-              <div className="flex items-center gap-4 hover:text-white transition">
+              <div className="flex items-center gap-4">
                 <Mail className="text-pink-500" size={22} />
                 bijoylaxmi.dev@gmail.com
               </div>
 
-              <div className="flex items-center gap-4 hover:text-white transition">
+              <div className="flex items-center gap-4">
                 <Phone className="text-purple-500" size={22} />
                 +91 9101820602
               </div>
 
-              <div className="flex items-center gap-4 hover:text-white transition">
+              <div className="flex items-center gap-4">
                 <MapPin className="text-indigo-500" size={22} />
                 Bhubaneswar, India
               </div>
-            </div>
-
-            <div className="flex gap-6 pt-6">
-              {[Github, Linkedin].map((Icon, index) => (
-                <motion.a
-                  key={index}
-                  whileHover={{ scale: 1.2 }}
-                  whileTap={{ scale: 0.9 }}
-                  className="p-4 rounded-xl bg-white/5 border border-white/10 hover:border-purple-500 backdrop-blur-md transition"
-                >
-                  <Icon size={22} className="text-gray-300 hover:text-white transition" />
-                </motion.a>
-              ))}
             </div>
           </div>
 
@@ -178,8 +143,6 @@ export default function Contact() {
             transition={{ duration: 0.4 }}
             className="relative bg-white/5 backdrop-blur-2xl border border-white/10 rounded-3xl p-10 shadow-2xl overflow-hidden"
           >
-
-            {/* Success Overlay */}
             <AnimatePresence>
               {successOverlay && (
                 <motion.div
@@ -188,13 +151,7 @@ export default function Contact() {
                   exit={{ opacity: 0 }}
                   className="absolute inset-0 bg-black/90 flex flex-col items-center justify-center z-20"
                 >
-                  <motion.div
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
-                    transition={{ type: "spring", stiffness: 200 }}
-                  >
-                    <CheckCircle size={70} className="text-green-400 mb-4" />
-                  </motion.div>
+                  <CheckCircle size={70} className="text-green-400 mb-4" />
                   <p className="text-xl font-semibold">
                     Message Delivered 🚀
                   </p>
@@ -203,7 +160,6 @@ export default function Contact() {
             </AnimatePresence>
 
             <form className="space-y-8" onSubmit={handleSubmit}>
-
               {["name", "email"].map((field) => (
                 <div key={field} className="relative">
                   <input
@@ -214,13 +170,7 @@ export default function Contact() {
                     placeholder=" "
                     className="peer w-full bg-neutral-900/80 border border-white/10 rounded-xl px-4 pt-6 pb-3 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/30 transition"
                   />
-                  <label className="absolute left-4 top-3 text-gray-400 text-sm transition-all
-                    peer-placeholder-shown:top-4
-                    peer-placeholder-shown:text-base
-                    peer-placeholder-shown:text-gray-500
-                    peer-focus:top-3
-                    peer-focus:text-sm
-                    peer-focus:text-purple-400">
+                  <label className="absolute left-4 top-3 text-gray-400 text-sm">
                     {field.charAt(0).toUpperCase() + field.slice(1)}
                   </label>
                 </div>
@@ -235,15 +185,6 @@ export default function Contact() {
                   placeholder=" "
                   className="peer w-full bg-neutral-900/80 border border-white/10 rounded-xl px-4 pt-6 pb-3 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/30 transition"
                 />
-                <label className="absolute left-4 top-3 text-gray-400 text-sm transition-all
-                  peer-placeholder-shown:top-4
-                  peer-placeholder-shown:text-base
-                  peer-placeholder-shown:text-gray-500
-                  peer-focus:top-3
-                  peer-focus:text-sm
-                  peer-focus:text-purple-400">
-                  Message
-                </label>
               </div>
 
               <motion.button
@@ -255,10 +196,8 @@ export default function Contact() {
               >
                 {loading ? "Sending..." : "Send Message"}
               </motion.button>
-
             </form>
           </motion.div>
-
         </div>
       </div>
     </section>
