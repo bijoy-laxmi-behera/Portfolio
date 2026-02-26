@@ -8,8 +8,8 @@ const projects = [
     description: "Full-stack food ordering platform with authentication and payment integration.(Ongoing project)",
     image: project2,
     tech: ["React", "Tailwind CSS", "Node.js", "MongoDB", "Express.js"],
-    github: "https://github.com/bijoy-laxmi-behera/quickbite-frontend",
-    demo: "https://github.com/bijoy-laxmi-behera/quickbite-frontend",
+    github: "https://github.com/bijoy-laxmi-behera/QuickBite",
+    demo: "https://github.com/bijoy-laxmi-behera/QuickBite",
   },
   {
     title: "Student Managemetent System",
