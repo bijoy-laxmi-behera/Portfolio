@@ -9,7 +9,7 @@ const projects = [
     image: project2,
     tech: ["React", "Tailwind CSS", "Node.js", "MongoDB", "Express.js"],
     github: "https://github.com/bijoy-laxmi-behera/QuickBite",
-    demo: "https://github.com/bijoy-laxmi-behera/QuickBite",
+    demo: "https://quick-bite-2026.vercel.app",
   },
   {
     title: "Student Managemetent System",
